@@ -1,5 +1,4 @@
-import React from 'react';
-
+ 
 const Hero = () => {
   return (
     <section className="relative bg-very-light-gray  pt-20 md:pt-0">
