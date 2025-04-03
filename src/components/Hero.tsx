@@ -1,7 +1,5 @@
-import { useTheme } from '../context/ThemeContext';
-
-const Hero = () => {
-  const { theme } = useTheme();
+ 
+const Hero = () => { 
   
   return (
     <section className="relative bg-very-light-gray dark:bg-dark-blue px-0 md:px-30 pt-20 md:pt-0">

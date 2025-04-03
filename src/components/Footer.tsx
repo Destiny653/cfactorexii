@@ -1,7 +1,5 @@
-import { useTheme } from '../context/ThemeContext';
 
-const Footer = () => {
-  const { theme } = useTheme();
+const Footer = () => { 
   
   return (
     <footer className="bg-[#2d314d] py-12 px-5 md:px-30">

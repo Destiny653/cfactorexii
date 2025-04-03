@@ -1,14 +1,10 @@
 import { features } from '../data/features';
-import { useTheme } from '../context/ThemeContext';
-import { useEffect } from 'react';
+import { useTheme } from '../context/ThemeContext'; 
 
 
 
 const Features = () => {
-  const { theme } = useTheme();
-  useEffect(() => {
-    return;
-  }, [theme]);
+  const { theme } = useTheme(); 
 
   return (
     <section className={`py-16 md:py-60 ${theme === 'dark' ? '' : 'bg-[#f4f5f7]'} `}
