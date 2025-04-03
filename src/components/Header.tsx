@@ -39,7 +39,7 @@ const Header = () => {
       <div className="container mx-auto px-5 md:px-6">
         <nav className="flex items-center justify-between h-16 md:h-20">
           <div className={`flex items-center ${theme === 'dark'? 'text-white' : ''}`}>
-            <img src="/images/logo.svg" alt="Easybank" className="h-5" />
+            <img src={theme === 'dark' ? '/images/logo-white.svg' : '/images/logo.svg'} alt="Easybank" className="h-5" />
           </div>
 
           {/* Desktop Menu */}
@@ -84,11 +84,21 @@ const Header = () => {
             <button 
               className="p-2 focus:outline-none"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"} 
           >
               {isMenuOpen ? 
-                <X size={24} className="text-dark-blue dark:text-white" /> : 
-                <Menu size={24} className="text-dark-blue dark:text-white" />
+                <X size={24} className="text-dark-blue dark:text-white"
+                style={{ 
+                  backgroundColor: theme === 'dark' ? '#141625' : '#fff',
+                  color: theme === 'dark' ? 'white' : 'black'
+                }}
+                 /> : 
+                <Menu size={24} className="text-dark-blue dark:text-white"
+                style={{ 
+                  backgroundColor: theme === 'dark' ? '#141625' : '#fff',
+                  color: theme === 'dark' ? 'white' : 'black'
+                }}
+                 />
               }
             </button>
             </div>
@@ -97,9 +107,13 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-gradient-to-b from-dark-blue/80 to-transparent z-40 md:hidden" onClick={() => setIsMenuOpen(false)}>
+        <div className="fixed inset-0 bg-gradient-to-b from-dark-blue/80 to-transparent z-40 md:hidden" onClick={() => setIsMenuOpen(false)} >
           <div 
             className="absolute top-20 inset-x-5 bg-white dark:bg-dark-blue rounded-lg shadow-lg py-8"
+            style={{ 
+              backgroundColor: theme === 'dark' ? '#141625' : '#fff',
+              color: theme === 'dark' ? 'white' : 'black'
+            }}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex flex-col space-y-6 text-center">
@@ -107,7 +121,7 @@ const Header = () => {
                 <a 
                   key={item}
                   href="#" 
-                  className="text-dark-blue dark:text-white hover:text-lime-green dark:hover:text-lime-green transition-colors"
+                  className="text-dark-blue  hover:text-lime-green dark:hover:text-lime-green transition-colors"
                 >
                   {item}
                 </a>
