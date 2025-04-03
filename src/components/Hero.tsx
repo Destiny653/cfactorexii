@@ -25,7 +25,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center">
           {/* Content */}
           <div className="w-full md:w-[45%] text-center md:text-left py-12 md:py-40">
-            <h1 className="text-4xl md:text-5xl font-light text-dark-blue dark:text-white mb-5 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-light text-dark-blue   mb-5 leading-tight">
               Next generation digital banking
             </h1>
             <p className="text-grayish-blue mb-8 max-w-md mx-auto md:mx-0">
