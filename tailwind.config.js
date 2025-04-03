@@ -1,4 +1,4 @@
- /** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
@@ -21,7 +21,7 @@ export default {
       },
       backgroundImage: {
         'gradient-primary': 'linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%))',
-    },
+      },
       container: {
         center: true,
         padding: {
@@ -29,7 +29,7 @@ export default {
           sm: '2rem',
           lg: '4rem',
           xl: '5rem',
-  },
+        },
         screens: {
           sm: '640px',
           md: '768px',
