@@ -1,8 +1,20 @@
 import { features } from '../data/features';
+import { useTheme } from '../context/ThemeContext';
+import { useEffect } from 'react';
 
-const Features = () => (
-  <section className="bg-[#f4f5f7] py-16 md:py-60"> {/* Using direct HEX color for consistency */}
-    <div className="container mx-auto px-5 md:px-0">
+
+
+const Features = () => {
+  const { theme } = useTheme();
+  useEffect(() => {
+    return;
+  }, [theme]);
+
+  return (
+    <section className={`py-16 md:py-60 ${theme === 'dark' ? '' : 'bg-[#f4f5f7]'} `}
+      
+    >
+    <div className="container mx-auto px-5 md:px-30">
       <div className="text-center md:text-left max-w-3xl">
         <h2 className="text-3xl md:text-4xl font-light text-dark-blue mb-5">Why choose Easybank?</h2>
         <p className="text-grayish-blue mb-12 md:mb-16">
@@ -22,6 +34,7 @@ const Features = () => (
       </div>
     </div>
   </section>
-);
+  );
+}
 
 export default Features;

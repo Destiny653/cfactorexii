@@ -1,10 +1,13 @@
- 
+import { useTheme } from '../context/ThemeContext';
+
 const Hero = () => {
+  const { theme } = useTheme();
+  
   return (
-    <section className="relative bg-very-light-gray  pt-20 md:pt-0">
+    <section className="relative bg-very-light-gray dark:bg-dark-blue px-0 md:px-30 pt-20 md:pt-0">
       {/* Mobile Images - shown only on mobile */}
       <div className="md:hidden relative">
-        <div className="bg-very-light-gray">
+        <div className="bg-very-light-gray dark:bg-dark-blue">
           <img 
             src="/images/bg-intro-mobile.svg" 
             alt="" 
@@ -24,7 +27,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center">
           {/* Content */}
           <div className="w-full md:w-[45%] text-center md:text-left py-12 md:py-40">
-            <h1 className="text-4xl md:text-5xl font-light text-dark-blue mb-5 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-light text-dark-blue dark:text-white mb-5 leading-tight">
               Next generation digital banking
             </h1>
             <p className="text-grayish-blue mb-8 max-w-md mx-auto md:mx-0">
@@ -36,8 +39,8 @@ const Hero = () => {
           </div>
           
           {/* Desktop background - only visible on desktop */}
-          <div className=" md:block md:w-[55%] absolute md:-right-20 lg:-right-70 top-0  h-full overflow-visible">
-            <div className="relative h-full  z-50">
+          <div className="md:block md:w-[55%] absolute md:-right-20 lg:-right-70 top-0 h-full overflow-visible">
+            <div className="relative h-full z-50">
               <img 
                 src="/images/bg-intro-desktop.svg" 
                 alt="" 

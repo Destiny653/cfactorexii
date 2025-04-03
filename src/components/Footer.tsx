@@ -1,7 +1,10 @@
+import { useTheme } from '../context/ThemeContext';
 
 const Footer = () => {
+  const { theme } = useTheme();
+  
   return (
-    <footer className="bg-[#2d314d] py-12">
+    <footer className="bg-[#2d314d] py-12 px-5 md:px-30">
       <div className="container mx-auto px-5 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* Logo and Social Icons */}
@@ -40,10 +43,10 @@ const Footer = () => {
   
           {/* CTA and Copyright */}
           <div className="flex flex-col items-center md:items-end md:col-span-4 space-y-6">
-          <button className="bg-gradient-to-r bg-gradient-to-br from-[#33D35E] to-[#2AB6D9] hover:to-[#2AB6D9] hover:from-[#8bca9c] to-bright-cyan text-white px-8 py-3 rounded-full hover:opacity-80 transition-opacity duration-200">
-          Request Invite
+            <button className="bg-gradient-to-r bg-gradient-to-br from-[#33D35E] to-[#2AB6D9] hover:to-[#2AB6D9] hover:from-[#8bca9c] to-bright-cyan text-white px-8 py-3 rounded-full hover:opacity-80 transition-opacity duration-200">
+              Request Invite
             </button>
-            <p className=" text-white text-sm">© Easybank. All Rights Reserved</p>
+            <p className="text-white text-sm">© Easybank. All Rights Reserved</p>
           </div>
         </div>
       </div>
