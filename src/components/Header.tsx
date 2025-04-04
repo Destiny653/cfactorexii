@@ -30,7 +30,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 px-0 md:px-30  ${isScrolled ? 'bg-white dark:bg-dark-blue shadow-md' : 'bg-white dark:bg-dark-blue'}`}
+    <header className={`fixed top-0 left-0 right-0 z-50 px-0 md:px-30 ${isScrolled ? 'bg-white dark:bg-dark-blue shadow-md' : 'bg-white dark:bg-dark-blue'}`}
     style={{ 
       backgroundColor: theme === 'dark' ? '#141625' : '#fff',
       color: theme === 'dark' ? 'white' : 'black'
@@ -48,10 +48,10 @@ const Header = () => {
               <a 
                 key={item} 
                 href="#" 
-                className="relative h-full flex items-center px-4 text-grayish-blue hover:text-dark-blue dark:hover:text-white transition-colors duration-200"
+                className="relative h-full flex items-center px-4 text-grayish-blue hover:text-dark-blue transition-colors duration-200 group"
               >
                 <span>{item}</span>
-                <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-lime-green to-bright-cyan scale-x-0 origin-left transition-transform duration-300 hover:scale-x-100"></span>
+                <span className="absolute bottom-0 left-0 w-full h-0 bg-gradient-to-r from-[#33D35E] to-[#2AB6D9] transform origin-bottom transition-all duration-300 group-hover:h-1"></span>
               </a>
             ))}
           </div>
@@ -66,7 +66,7 @@ const Header = () => {
               {theme === 'dark' ? <Sun size={20} className="text-white" /> : <Moon size={20} className="text-dark-blue" />}
           </button>
             
-            <button className="bg-gradient-to-r bg-gradient-to-br from-[#33D35E] to-[#2AB6D9] hover:to-[#2AB6D9] hover:from-[#8bca9c] to-bright-cyan text-white px-8 py-3 rounded-full hover:opacity-80 transition-opacity duration-200">
+            <button className="  bg-gradient-to-br from-[#33D35E] to-[#2AB6D9] hover:to-[#2AB6D9] hover:from-[#8bca9c] to-bright-cyan text-white px-8 py-3 rounded-full hover:opacity-80 transition-opacity duration-200">
               Request Invite
             </button>
       </div>
@@ -121,9 +121,10 @@ const Header = () => {
                 <a 
                   key={item}
                   href="#" 
-                  className="text-dark-blue  hover:text-lime-green dark:hover:text-lime-green transition-colors"
+                  className="relative text-dark-blue hover:text-lime-green dark:hover:text-lime-green transition-colors pb-1 group"
                 >
                   {item}
+                  <span className="absolute bottom-0 left-1/4 w-1/2 h-0 bg-gradient-to-r from-[#33D35E] to-[#2AB6D9] transform origin-bottom transition-all duration-300 group-hover:h-0.5"></span>
                 </a>
               ))}
             </div>
